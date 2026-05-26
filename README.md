@@ -12,6 +12,7 @@ Cette page présente :
 - les 10 avantages majeurs ;
 - les 5 phases du parcours ;
 - les livrables attendus ;
+- le bonus final avec soutenance du projet et attribution de prix symboliques ;
 - le QR code pour rejoindre le groupe WhatsApp.
 
 ## Lien WhatsApp

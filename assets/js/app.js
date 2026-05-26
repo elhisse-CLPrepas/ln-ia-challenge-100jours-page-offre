@@ -57,24 +57,34 @@ function formatNumber(value) {
   return String(value).padStart(2, "0");
 }
 
+function setCountdownValues(values) {
+  Object.entries(values).forEach(([key, value]) => {
+    document.querySelectorAll(`[data-countdown='${key}']`).forEach((node) => {
+      node.textContent = value;
+    });
+  });
+}
+
+function setCountdownMessage(text) {
+  document.querySelectorAll("[data-countdown-message]").forEach((message) => {
+    message.textContent = text;
+  });
+}
+
 function updateCountdown() {
-  const countdown = document.querySelector("#countdown");
-  if (!countdown) return;
+  const countdownNodes = document.querySelectorAll("[data-countdown]");
+  if (!countdownNodes.length) return;
 
   const diff = targetDate.getTime() - Date.now();
-  const message = countdown.querySelector("[data-countdown-message]");
-  const values = {
-    days: countdown.querySelector("[data-countdown='days']"),
-    hours: countdown.querySelector("[data-countdown='hours']"),
-    minutes: countdown.querySelector("[data-countdown='minutes']"),
-    seconds: countdown.querySelector("[data-countdown='seconds']")
-  };
 
   if (diff <= 0) {
-    Object.values(values).forEach((node) => {
-      if (node) node.textContent = "00";
+    setCountdownValues({
+      days: "00",
+      hours: "00",
+      minutes: "00",
+      seconds: "00"
     });
-    if (message) message.textContent = "Le challenge a commencé.";
+    setCountdownMessage("Le challenge a commencé.");
     return;
   }
 
@@ -84,11 +94,13 @@ function updateCountdown() {
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
 
-  if (values.days) values.days.textContent = formatNumber(days);
-  if (values.hours) values.hours.textContent = formatNumber(hours);
-  if (values.minutes) values.minutes.textContent = formatNumber(minutes);
-  if (values.seconds) values.seconds.textContent = formatNumber(seconds);
-  if (message) message.textContent = "";
+  setCountdownValues({
+    days: formatNumber(days),
+    hours: formatNumber(hours),
+    minutes: formatNumber(minutes),
+    seconds: formatNumber(seconds)
+  });
+  setCountdownMessage("");
 }
 
 function renderAdvantages(advantages) {

@@ -69,6 +69,81 @@ a {
   text-decoration: none;
 }
 
+.event-banner {
+  position: sticky;
+  top: 68px;
+  z-index: 18;
+  color: var(--white);
+  background: linear-gradient(135deg, var(--navy-2), var(--navy));
+  border-bottom: 1px solid rgba(242, 210, 122, 0.45);
+  box-shadow: 0 12px 32px rgba(6, 22, 45, 0.16);
+}
+
+.event-banner__inner {
+  width: min(1120px, calc(100% - 32px));
+  min-height: 76px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+.event-banner__copy {
+  display: grid;
+  gap: 4px;
+}
+
+.event-banner__copy span {
+  color: var(--gold-light);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.event-banner__copy strong {
+  color: var(--white);
+  font-size: clamp(1rem, 2vw, 1.22rem);
+  line-height: 1.2;
+}
+
+.event-countdown {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(76px, 1fr));
+  gap: 8px;
+  min-width: min(520px, 100%);
+}
+
+.event-countdown span {
+  min-height: 52px;
+  display: grid;
+  place-items: center;
+  padding: 7px 8px;
+  border: 1px solid rgba(242, 210, 122, 0.36);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.78);
+  text-align: center;
+  font-size: 0.72rem;
+}
+
+.event-countdown strong {
+  display: block;
+  color: var(--gold-light);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.event-countdown em {
+  grid-column: 1 / -1;
+  color: var(--gold-light);
+  font-style: normal;
+  font-weight: 800;
+  text-align: center;
+}
+
 .hero {
   min-height: calc(100vh - 68px);
   display: grid;
@@ -558,6 +633,21 @@ details p {
 }
 
 @media (max-width: 900px) {
+  .event-banner {
+    top: 68px;
+  }
+
+  .event-banner__inner {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .event-countdown {
+    min-width: 0;
+    width: 100%;
+  }
+
   .hero,
   .split {
     grid-template-columns: 1fr;
@@ -574,6 +664,11 @@ details p {
 }
 
 @media (max-width: 620px) {
+  .event-banner {
+    position: relative;
+    top: auto;
+  }
+
   .nav {
     align-items: flex-start;
     flex-direction: column;
@@ -594,6 +689,10 @@ details p {
   }
 
   .countdown__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .event-countdown {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 

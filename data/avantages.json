@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "titre": "Alignement avec le développement moderne",
+    "description": "L’atelier introduit une manière actuelle de travailler : structuration, automatisation, documentation, versionnement et amélioration continue."
+  },
+  {
+    "id": 2,
+    "titre": "Multiplication de la production",
+    "description": "L’IA permet de produire plus vite des textes, supports, plans, pages web, guides, affiches, scripts et documents professionnels."
+  },
+  {
+    "id": 3,
+    "titre": "Gain d’autonomie",
+    "description": "Les participants apprennent à piloter leurs propres productions sans dépendre constamment d’un prestataire technique."
+  },
+  {
+    "id": 4,
+    "titre": "Organisation du travail numérique",
+    "description": "L’atelier aide à passer du désordre numérique à un espace de travail clair, classé, exploitable et durable."
+  },
+  {
+    "id": 5,
+    "titre": "Capitalisation des livrables",
+    "description": "Chaque production devient une ressource réutilisable, améliorable et transmissible."
+  },
+  {
+    "id": 6,
+    "titre": "Longévité et pérennité des projets",
+    "description": "La documentation, les versions et les méthodes permettent aux projets de vivre, évoluer et se transmettre dans le temps."
+  },
+  {
+    "id": 7,
+    "titre": "Montée en compétence progressive",
+    "description": "Le challenge est structuré sur 100 jours pour permettre une progression régulière, concrète et mesurable."
+  },
+  {
+    "id": 8,
+    "titre": "Transformation des idées en produits",
+    "description": "Les participants apprennent à transformer une idée brute en guide, page, offre, support, atelier ou dossier professionnel."
+  },
+  {
+    "id": 9,
+    "titre": "Développement d’une culture IA responsable",
+    "description": "L’atelier apprend à utiliser l’IA comme assistant de méthode, de production et de réflexion, sans perdre le contrôle humain."
+  },
+  {
+    "id": 10,
+    "titre": "Création d’un écosystème personnel de production",
+    "description": "À la fin du challenge, chaque participant dispose d’une base de travail, de prompts, de modèles, de documents et d’une méthode reproductible."
+  }
+]

@@ -201,6 +201,14 @@ h3 {
   background: var(--white);
   box-shadow: 0 14px 34px rgba(6, 22, 45, 0.1);
   text-align: left;
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.qr-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(212, 166, 66, 0.7);
+  box-shadow: 0 18px 40px rgba(6, 22, 45, 0.16);
 }
 
 .qr-card img {

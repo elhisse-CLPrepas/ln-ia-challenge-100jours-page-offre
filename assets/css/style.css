@@ -51,9 +51,18 @@ a {
 }
 
 .brand {
-  color: var(--navy);
-  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
   text-decoration: none;
+}
+
+.brand img {
+  display: block;
+  width: clamp(132px, 16vw, 190px);
+  height: auto;
+  max-height: 46px;
+  object-fit: contain;
 }
 
 .nav-links {

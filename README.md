@@ -33,6 +33,7 @@ https://chat.whatsapp.com/LVnXAMyFOqt94f77e1VHjK
 │   ├── js/app.js
 │   └── img/
 │       ├── hero-placeholder.jpg
+│       ├── logo-LN-IA.png
 │       └── qr-whatsapp-rejoindre-challenge.png
 ├── data/avantages.json
 ├── .nojekyll
